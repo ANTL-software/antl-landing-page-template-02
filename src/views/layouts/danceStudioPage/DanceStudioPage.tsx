@@ -1,11 +1,13 @@
 import type { CSSProperties, ReactNode } from "react";
 import { FiArrowUpRight } from "react-icons/fi";
 import { Link } from "react-router-dom";
+import danceFoundersImage from "../../../assets/dance-founders.png";
+import danceHeroImage from "../../../assets/dance-hero.png";
 import { useDanceStudioPage } from "../../../hooks/useDanceStudioPage";
 import type { DanceStudioSite, StudioSectionId } from "../../../types/danceStudio.types";
 import "./danceStudioPage.scss";
 
-type StudioPageStyle = CSSProperties & Record<"--studio-stage-image", string>;
+type StudioPageStyle = CSSProperties & Record<"--studio-founder-image" | "--studio-hero-image", string>;
 
 type StudioLinkProps = { className?: string; link: { label: string; href: string }; showArrow?: boolean };
 
@@ -65,7 +67,10 @@ const sectionComponents: Record<StudioSectionId, (site: DanceStudioSite) => Reac
 
 export function DanceStudioPage() {
   const { site } = useDanceStudioPage();
-  const style: StudioPageStyle = { "--studio-stage-image": `url(${import.meta.env.BASE_URL}assets/dance-stage.jpg)` };
+  const style: StudioPageStyle = {
+    "--studio-founder-image": `url(${danceFoundersImage})`,
+    "--studio-hero-image": `url(${danceHeroImage})`,
+  };
 
   return <main className={`dance-studio ${site.themeClassName}`} style={style}><StudioHeader site={site} />{site.sections.filter((section) => section.enabled).map((section) => <div key={section.id}>{sectionComponents[section.id](site)}</div>)}<StudioFooter site={site} /></main>;
 }

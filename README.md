@@ -68,4 +68,4 @@ Configurer ensuite exclusivement les identifiants Stripe du client, les offres e
 
 ## Référence design
 
-La composition s'inspire de [Moody Dance Studio](https://www.figma.com/site/vjc4uqkPa4BjF9MD5uk74O/Moody-Dance-Studio--Community-), par Figma Community. Les contenus et la marque sont des placeholders originaux. L'image de démonstration est une photo d'Unsplash par Milana Aernova, à remplacer pour chaque projet client.
+La composition s'inspire de [Moody Dance Studio](https://www.figma.com/site/vjc4uqkPa4BjF9MD5uk74O/Moody-Dance-Studio--Community-), par Figma Community. Les contenus, la marque et les visuels de démonstration sont des placeholders originaux. Les deux images sont locales, versionnées dans `src/assets/` et doivent être remplacées par les visuels du client lors d'une personnalisation.
