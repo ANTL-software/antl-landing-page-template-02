@@ -10,7 +10,7 @@ export type StudioTheme = { id: string; className: string };
 
 export type StudioFeature = { title: string; text: string; number: string };
 
-export type Founder = { name: string; role: string; image: StudioImage };
+export type Founder = { name: string; role: string; panel: "left" | "right"; image: StudioImage };
 
 export type DanceStudioSite = {
   theme: StudioTheme;

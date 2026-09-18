@@ -5,4 +5,5 @@
 .studio-hero__shade { background: linear-gradient(90deg, rgba(0,0,0,.66), rgba(0,0,0,.12)); }
 .studio-hero__content { position: relative; z-index: 1; display: flex; min-height: inherit; padding: clamp(2rem, 8vw, 7rem) clamp(1.5rem, 5vw, 4.75rem); flex-direction: column; justify-content: space-between; }
 .studio-hero h1 { max-width: 8ch; margin: 0; white-space: pre-line; font-size: clamp(4.5rem, 11vw, 10rem); font-weight: 600; letter-spacing: -.1em; line-height: .78; }
-@media (max-width: 760px) { .studio-hero__image { min-height: 37rem; }.studio-hero__image > img { object-position: 67% center !important; }.studio-hero__content { padding: 2rem 1rem; }.studio-hero h1 { font-size: clamp(4rem, 19vw, 6.5rem); } }
+@media (max-width: 900px) { .studio-hero__image { min-height: 36rem; }.studio-hero__image > img { object-position: 58% top !important; } }
+@media (max-width: 760px) { .studio-hero__image { min-height: 37rem; }.studio-hero__image > img { object-position: 45% top !important; }.studio-hero__content { padding: 2rem 1rem; }.studio-hero h1 { font-size: clamp(4rem, 19vw, 6.5rem); } }
