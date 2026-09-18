@@ -8,9 +8,9 @@ Template de site vitrine réutilisable d'antl, inspiré de la maquette Figma « 
 - SCSS natif : aucune bibliothèque visuelle imposée
 - `src/content/danceStudio.ts` est la configuration d'un client : marque, textes, CTA, thème et sections
 - `src/types/` décrit les contrats de contenu et de composition
-- `src/models/` porte les règles pures de résolution des sections
 - `src/hooks/` prépare l'état consommé par les layouts
-- `src/views/layouts/danceStudioPage/` contient la composition de page et son écran 404
+- `src/views/components/` contient chaque section, le header, footer et liens réutilisables
+- `src/views/layouts/danceStudioPage/` orchestre l'ordre des sections et contient l'écran 404
 - `src/utils/styles/` centralise les mixins et styles globaux
 
 ### Composer une page
@@ -25,7 +25,7 @@ sections: [
 ]
 ```
 
-Le thème actif est choisi par `site.themeClassName`. Ses tokens de couleur sont regroupés dans `.theme-dance-studio`, au début de `src/views/layouts/danceStudioPage/danceStudioPage.scss`.
+Le thème actif est choisi par `site.theme.className`. Ses tokens de couleur sont regroupés dans `.theme-dance-studio`, au début de `src/views/layouts/danceStudioPage/danceStudioPage.scss`. Les images et leurs cadrages desktop sont configurés dans le même fichier de contenu, via `image.src` et `image.position`.
 
 ## Démarrer
 
@@ -52,7 +52,7 @@ Le fichier `public/404.html` redirige les accès directs à une URL inconnue ver
 2. Remplacer la configuration dans `src/content/danceStudio.ts` : nom, navigation, textes, sections et coordonnées.
 3. Choisir ou créer le thème dans le fichier de styles du layout.
 4. Réordonner ou désactiver les sections dans `site.sections`.
-5. Remplacer les illustrations CSS par des visuels de marque lorsque le client les fournit.
+5. Remplacer les visuels locaux et régler leurs cadrages depuis `src/content/danceStudio.ts` lorsque le client les fournit.
 6. Ne conserver que les sections utiles à son parcours ; le template ne force ni catalogue, ni blog, ni paiement.
 
 ## Modules optionnels
