@@ -14,7 +14,17 @@ const sectionComponents: Record<StudioSectionId, (site: DanceStudioSite) => Reac
 
 export function DanceStudioPage() {
   const { site } = useDanceStudioPage();
-  return <main className={`dance-studio ${site.theme.className}`}><SiteHeader site={site} />{site.sections.filter((section) => section.enabled).map((section) => <div key={section.id}>{sectionComponents[section.id](site)}</div>)}<SiteFooter brand={site.brand} footer={site.footer} /></main>;
+  const heroEnabled = site.sections.some((section) => section.id === "hero" && section.enabled);
+  const sections = site.sections.filter((section) => section.enabled && section.id !== "hero");
+
+  return <main className={`dance-studio ${site.theme.className}`}>
+    <div className={heroEnabled ? "dance-studio__intro" : undefined}>
+      <SiteHeader site={site} />
+      {heroEnabled ? sectionComponents.hero(site) : null}
+    </div>
+    {sections.map((section) => <div key={section.id}>{sectionComponents[section.id](site)}</div>)}
+    <SiteFooter brand={site.brand} footer={site.footer} />
+  </main>;
 }
 
 export function DanceNotFoundPage() {
