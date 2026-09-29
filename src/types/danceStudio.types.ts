@@ -22,7 +22,11 @@ export type DanceStudioSite = {
   vision: { eyebrow: string; title: string; text: string; cta: StudioLink; image: StudioImage };
   classes: { eyebrow: string; title: string; text: string; cta: StudioLink; items: readonly StudioFeature[] };
   founders: { eyebrow: string; quote: string; people: readonly Founder[] };
-  reserve: { title: string; text: string; cta: StudioLink };
+  reserve: {
+    title: string;
+    text: string;
+    bookingDemo: { title: string; serviceId: string; resourceId: string; timeZone: string; durationMinutes: number; storageKey: string };
+  };
   footer: { email: string; phone: string; city: string };
   sections: readonly StudioSection[];
 };
