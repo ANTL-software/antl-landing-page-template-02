@@ -3,7 +3,12 @@ import danceHeroImage from "../assets/dance-hero.png";
 import type { DanceStudioSite } from "../types/danceStudio.types";
 
 export const danceStudioSite: DanceStudioSite = {
-  theme: { id: "dance-studio", className: "theme-dance-studio" },
+  theme: {
+    id: "dance-studio",
+    className: "theme-dance-studio",
+    palette: { canvas: "#080808", surface: "#171717", ink: "#f4f3ee", muted: "#aaa9a4", line: "#343434", accent: "#4055f8", button: "#d6f7f3", buttonInk: "#101010" },
+    typography: { body: '"Inter", Arial, sans-serif', mono: '"DM Mono", monospace' },
+  },
   brand: "Mouvement Studio.",
   address: "18 rue du Mouvement, Paris",
   navigation: [{ label: "Cours", href: "#cours" }, { label: "Le studio", href: "#vision" }],

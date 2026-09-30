@@ -6,7 +6,25 @@ export type StudioLink = { label: string; href: string };
 
 export type StudioImage = { src: string; alt: string; position?: string };
 
-export type StudioTheme = { id: string; className: string };
+export type StudioPalette = {
+  canvas: string;
+  surface: string;
+  ink: string;
+  muted: string;
+  line: string;
+  accent: string;
+  button: string;
+  buttonInk: string;
+};
+
+export type StudioTypography = { body: string; mono: string };
+
+export type StudioTheme = {
+  id: string;
+  className: string;
+  palette: StudioPalette;
+  typography: StudioTypography;
+};
 
 export type StudioFeature = { title: string; text: string; number: string };
 

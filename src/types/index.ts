@@ -1,1 +1,1 @@
-export type { DanceStudioSite, Founder, StudioFeature, StudioLink, StudioSection, StudioSectionId } from "./danceStudio.types";
+export type { DanceStudioSite, Founder, StudioFeature, StudioLink, StudioPalette, StudioSection, StudioSectionId, StudioTheme, StudioTypography } from "./danceStudio.types";

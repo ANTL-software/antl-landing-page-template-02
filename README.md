@@ -25,7 +25,7 @@ sections: [
 ]
 ```
 
-Le thème actif est choisi par `site.theme.className`. Ses tokens de couleur sont regroupés dans `.theme-dance-studio`, au début de `src/views/layouts/danceStudioPage/danceStudioPage.scss`. Les images et leurs cadrages desktop sont configurés dans le même fichier de contenu, via `image.src` et `image.position`.
+La palette et les polices sont directement éditables dans `site.theme` (`palette` et `typography`) ; elles sont injectées comme variables CSS à la racine de la page. La classe `.theme-dance-studio` conserve les valeurs de repli. Les images et leurs cadrages desktop sont configurés dans le même fichier de contenu, via `image.src` et `image.position`.
 
 ## Démarrer
 
@@ -50,7 +50,7 @@ Le fichier `public/404.html` redirige les accès directs à une URL inconnue ver
 
 1. Dupliquer ce dossier dans le dépôt du site client.
 2. Remplacer la configuration dans `src/content/danceStudio.ts` : nom, navigation, textes, sections et coordonnées.
-3. Choisir ou créer le thème dans le fichier de styles du layout.
+3. Modifier `site.theme.palette` et `site.theme.typography` pour appliquer les couleurs et polices du client.
 4. Réordonner ou désactiver les sections dans `site.sections`.
 5. Remplacer les visuels locaux et régler leurs cadrages depuis `src/content/danceStudio.ts` lorsque le client les fournit.
 6. Ne conserver que les sections utiles à son parcours ; le template ne force ni catalogue, ni blog, ni paiement.
