@@ -1,6 +1,6 @@
 .studio-founders { display: grid; grid-template-columns: .8fr 1.2fr; border-bottom: 1px solid var(--studio-line); }
 .studio-founders__intro { padding: clamp(2rem, 7vw, 6rem) clamp(1rem, 5vw, 4.75rem); }
-.studio-founders blockquote { max-width: 10ch; margin: 8rem 0 0; font-size: clamp(2.2rem, 4.5vw, 4.5rem); letter-spacing: -.08em; line-height: .95; }
+.studio-founders blockquote { max-width: 10ch; margin: 8rem 0 0; font-size: clamp(2.2rem, 4.5vw, 4.5rem); letter-spacing: -.08em; line-height: 1.1; }
 .studio-founders__grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); border-left: 1px solid var(--studio-line); }
 .studio-founder { display: flex; min-height: 40rem; flex-direction: column; background: var(--studio-surface); }
 .studio-founder + .studio-founder { border-left: 1px solid var(--studio-line); }

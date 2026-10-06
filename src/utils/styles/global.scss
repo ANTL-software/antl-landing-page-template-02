@@ -8,3 +8,10 @@ body { margin: 0; background: var(--studio-canvas, #080808); color: var(--studio
 a { color: inherit; text-decoration: none; }
 a:focus-visible { @include mixins.focus-ring; }
 button { font: inherit; }
+button,a,input,select { -webkit-tap-highlight-color: transparent; }
+button,a { touch-action: manipulation; }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .studio-ticker div { animation: none; }
+  .studio-button { transition: none; }
+}

@@ -57,6 +57,16 @@ Le fichier `public/404.html` redirige les accès directs à une URL inconnue ver
 
 ## Modules optionnels
 
+### Espace adhérent de démonstration
+
+Accessible via « Espace adhérent » dans le header ou `/#/account`. Démo générique sans personnalisation pour un prospect : profil fictif, planning dancehall, afro fusion, hip-hop freestyle et souplesse sur sept jours, réservation et annulation, liste d'attente, formules mensuelles, crédits, renouvellement, recharge et historique de paiements fictifs avec justificatifs téléchargeables.
+
+Le contenu et les offres sont configurés dans `src/content/member.ts`, les contrats dans `src/types/member.ts` et les actions dans `src/hooks/useMemberAccount.ts`. Le layout et son SCSS restent isolés sous `src/views/layouts/memberAccount/`.
+
+Les données sont conservées en localStorage sous une clé propre à la démo. Le bouton de réinitialisation permet de rejouer le scénario. Aucun login réel, email ou prélèvement n'est effectué. Une livraison nécessite un backend d'authentification, des réservations collectives avec capacité serveur, des adhésions persistées et les webhooks du module de paiement. L'espace adhérent simule ces opérations indépendamment du composant de cours d'essai `BookingDemo` déjà présent sur la vitrine.
+
+Parcours de présentation : réserver un cours, rejoindre un cours complet, annuler et voir le crédit revenir, changer de formule, recharger le carnet, télécharger un justificatif, modifier les coordonnées et recharger la page pour vérifier la persistance.
+
 Le template ne contient pas de paiement activé par défaut : aucun produit, prix ou compte Stripe client n'est encore défini. Lorsqu'un projet le justifie, exporter le module autonome dans ce dépôt :
 
 ```sh
@@ -65,6 +75,10 @@ npm run export:site -- --target ../antl-landing-page-template-02 --ui react
 ```
 
 Configurer ensuite exclusivement les identifiants Stripe du client, les offres et le traitement métier du webhook, conformément à `PAYMENTS_SETUP.md` généré par l'export. Le navigateur ne doit transmettre qu'un `offerId`.
+
+## Vérification responsive
+
+Contrôler la vitrine, la réservation, la page 404 et les six onglets adhérent en 320×568, 390×844, 430×932, 768×1024, 1024×768, 1440×900 et 844×390 (paysage). Vérifier l'absence de débordement horizontal, le cadrage des images, les cibles tactiles d'au moins 44px (48px pour la réservation), les champs à 16px et les modales accessibles sur écran bas. Les tests de dimensions dans le navigateur de développement ne remplacent pas une recette sur Safari iOS et Android réels.
 
 ## Référence design
 
