@@ -3,6 +3,8 @@
 .member-account { overflow-wrap: anywhere; }
 .member-account button { min-height: 44px; }
 .member-account button svg,.member-top svg,.member-notice svg { flex-shrink: 0; }
+.member-sidebar__balance button { display: inline-flex; align-items: center; gap: .5rem; }
+.member-sidebar__balance button svg { width: 1rem; height: 1rem; }
 .member-top a { min-width: 44px; min-height: 44px; justify-content: center; }
 .member-avatar { flex-shrink: 0; }
 .member-account .member-form input:not([type="checkbox"]),.member-account .member-filters select { width: 100%; min-width: 0; font-size: 16px; }
